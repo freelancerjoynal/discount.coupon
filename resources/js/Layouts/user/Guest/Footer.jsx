@@ -34,7 +34,7 @@ export default function Footer({ socials }) {
             style={{ background: "rgb(251,251,251)" }}
         >
             <div className="container mx-auto flex flex-wrap items-center justify-center gap-4 text-center font-['Varela_Round'] text-[18px] font-[400] tracking-[-1px] text-[#000] sm:text-[20px] md:gap-5 md:text-[24px] lg:text-[28px] xl:text-[33px]">
-                <p>&copy; 2024 - Balash Coupons, Erbil.</p>
+                <p>&copy; {new Date().getFullYear()} - Balash Coupons, Erbil.</p>
                 <a href="#" className="underline">
                     Terms of Use
                 </a>
