@@ -194,8 +194,18 @@ class CouponController extends Controller
         $search = $request->input('search');
 
         $coupons = Coupon::query()
+            ->with('shop') // Eager load shop relationship
             ->when($search, function ($query, $search) {
-                return $query->where('code', 'like', "%{$search}%");
+                $search = strtolower($search);
+                return $query->where(function($q) use ($search) {
+                    $q->whereRaw('LOWER(code) LIKE ?', ["%{$search}%"])
+                      ->orWhereRaw('LOWER(description) LIKE ?', ["%{$search}%"])
+                      ->orWhereRaw('LOWER(short_description) LIKE ?', ["%{$search}%"])
+                      ->orWhereRaw('LOWER(title) LIKE ?', ["%{$search}%"])
+                      ->orWhereHas('shop', function($shopQuery) use ($search) {
+                          $shopQuery->whereRaw('LOWER(name) LIKE ?', ["%{$search}%"]);
+                      });
+                });
             })
             ->paginate(10);
 
