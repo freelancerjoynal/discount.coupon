@@ -1,0 +1,50 @@
+body {
+    background: "rgb(20,30,25)" !important;
+}
+
+.guest-header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    min-height: 80px;
+    align-items: center;
+    background: red;
+    z-index: 50;
+}
+
+.guest-header .container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (max-width: 1260px) {
+    .hide-flag {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero-res-top {
+        margin-top: 95px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-res-top {
+        margin-top: 50px !important;
+    }
+}
+
+@media (max-width: 425px) {
+    .hero-res-top {
+        margin-top: 40px !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .guest-header {
+        min-height: 96px;
+    }
+}

@@ -1,0 +1,25 @@
+.phoneWithCode {
+    position: relative;
+    margin-top: -15px;
+}
+
+.phoneWithCode select {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    border-radius: 6px;
+    height: 40px;
+    width: 25%;
+}
+
+.phoneWithCode input {
+    position: absolute;
+    left: 90px;
+    top: 0px;
+    width: 75%;
+    height: 40px;
+}
+
+.login-forms .label {
+    color: #ffffff !important;
+}

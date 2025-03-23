@@ -1,0 +1,76 @@
+.coupon-wrapper {
+    overflow: hidden;
+}
+.coupon-dots .dot {
+    width: 17px;
+    height: 17px;
+    background: #141e19;
+    border-radius: 50%;
+    margin-top: 10px;
+    border: 2px solid gray;
+}
+
+.coupon-dots {
+    position: absolute;
+    top: -17px;
+    right: -8px;
+    display: grid;
+    overflow: hidden;
+    z-index: 5;
+}
+.coupon-right-card {
+    max-width: 170px;
+    background: #fff;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    border-right: 2px solid gray;
+}
+
+.coupon-left-card {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+}
+
+.coupon-text {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    z-index: 2;
+}
+
+.coupon-shot-dec {
+    margin-top: 8px;
+    max-width: 450px;
+    margin-bottom: 6px;
+    overflow: hidden;
+    display: block;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+.coupon-code {
+    width: 150px;
+    height: 45px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.coupon-code-hider {
+    position: absolute;
+    top: -45px;
+    left: 46px;
+    rotate: 90deg;
+    width: 40px;
+    height: 132px;
+}
+
+.get-coupon-code {
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    text-align: center;
+}

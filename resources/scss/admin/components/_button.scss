@@ -1,0 +1,170 @@
+@layer components {
+  .btn {
+    $btn: &;
+    @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-primary px-4 py-2 text-sm transition-colors duration-150 ease-in-out outline-none disabled:cursor-not-allowed disabled:opacity-60;
+
+    //Sizes
+    &-xs {
+      @apply px-2 py-1 text-xs;
+    }
+
+    &-sm {
+      @apply px-3 py-1.5 text-sm;
+    }
+
+    &-md {
+      @apply px-4 py-2 text-sm;
+    }
+
+    &-lg {
+      @apply px-5 py-2.5 text-base;
+    }
+
+    &-xl {
+      @apply px-6 py-3 text-base;
+    }
+
+    //Groups
+    &-group {
+      @apply inline-flex rounded-primary;
+
+      & > #{$btn} {
+        @apply rounded-none;
+
+        &:first-child {
+          @apply rounded-l-primary;
+        }
+
+        &:last-child {
+          @apply rounded-r-primary border-l-0;
+        }
+
+        &:not(:first-child):not(:last-child) {
+          @apply border-l-0;
+        }
+      }
+
+      &.rounded {
+        #{$btn}:first-child {
+          @apply rounded-l-full;
+        }
+
+        #{$btn}:last-child {
+          @apply rounded-r-full;
+        }
+      }
+    }
+
+    &-primary {
+      @apply bg-primary-500 text-white disabled:bg-primary-500;
+    }
+
+    &-secondary {
+      @apply bg-secondary-500 text-white disabled:bg-secondary-500;
+    }
+
+    &-success {
+      @apply bg-success-500 text-white disabled:bg-success-500;
+    }
+
+    &-warning {
+      @apply bg-warning-500 text-white disabled:bg-warning-500;
+    }
+
+    &-danger {
+      @apply bg-danger-500 text-white disabled:bg-danger-500;
+    }
+
+    &-info {
+      @apply bg-info-500 text-white disabled:bg-info-500;
+    }
+
+    &-dark {
+      @apply bg-dark-500 text-white disabled:bg-dark-500;
+    }
+
+    &-outline-primary {
+      @apply border border-primary-500 text-primary-500 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent dark:disabled:hover:text-primary-500;
+    }
+
+    &-outline-secondary {
+      @apply border border-secondary-500 text-secondary-500 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent dark:disabled:hover:text-secondary-500;
+    }
+
+    &-outline-success {
+      @apply border border-success-500 text-success-500 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent dark:disabled:hover:text-success-500;
+    }
+
+    &-outline-info {
+      @apply border border-info-500 text-info-500 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent dark:disabled:hover:text-info-500;
+    }
+
+    &-outline-warning {
+      @apply border border-warning-500 text-warning-500 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent dark:disabled:hover:text-warning-500;
+    }
+
+    &-outline-danger {
+      @apply border border-danger-500 text-danger-500 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent dark:disabled:hover:text-danger-500;
+    }
+
+    &-outline-dark {
+      @apply border border-dark-500 text-dark-500 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent dark:disabled:hover:text-dark-500;
+    }
+
+    &-plain-primary {
+      @apply text-primary-500 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent;
+    }
+
+    &-plain-secondary {
+      @apply text-secondary-500 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent;
+    }
+
+    &-plain-success {
+      @apply text-success-500 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent;
+    }
+
+    &-plain-info {
+      @apply text-info-500 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent;
+    }
+
+    &-plain-warning {
+      @apply text-warning-500 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent;
+    }
+
+    &-plain-danger {
+      @apply text-danger-500 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent;
+    }
+
+    &-plain-dark {
+      @apply text-dark-500 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent;
+    }
+
+    &-soft-primary {
+      @apply bg-primary-100 text-primary-500 disabled:hover:bg-primary-100 dark:bg-primary-900 dark:text-primary-200 dark:disabled:hover:bg-primary-900;
+    }
+
+    &-soft-secondary {
+      @apply bg-secondary-100 text-secondary-500 disabled:hover:bg-secondary-100 dark:bg-secondary-900 dark:text-secondary-200 dark:disabled:hover:bg-secondary-900;
+    }
+
+    &-soft-success {
+      @apply bg-success-100 text-success-500 disabled:hover:bg-success-100 dark:bg-success-900 dark:text-success-200 dark:disabled:hover:bg-success-900;
+    }
+
+    &-soft-info {
+      @apply bg-info-100 text-info-500 disabled:hover:bg-info-100 dark:bg-info-900 dark:text-info-200 dark:disabled:hover:bg-info-900;
+    }
+
+    &-soft-warning {
+      @apply bg-warning-100 text-warning-500 disabled:hover:bg-warning-100 dark:bg-warning-900 dark:text-warning-200 dark:disabled:hover:bg-warning-900;
+    }
+
+    &-soft-danger {
+      @apply bg-danger-100 text-danger-500 disabled:hover:bg-danger-100 dark:bg-danger-900 dark:text-danger-200 dark:disabled:hover:bg-danger-900;
+    }
+
+    &-soft-dark {
+      @apply bg-dark-100 text-dark-500 disabled:hover:bg-dark-100 dark:bg-dark-900 dark:text-dark-200 dark:disabled:hover:bg-dark-900;
+    }
+  }
+}

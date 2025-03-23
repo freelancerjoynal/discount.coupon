@@ -1,0 +1,8 @@
+#nprogress .bar {
+    background: rgb(253, 208, 23) !important;  /* Changed to yellow color */
+    height: 4px !important;
+}
+
+#nprogress .peg {
+    box-shadow: 0 0 10px rgb(253, 208, 23), 0 0 5px rgb(253, 208, 23) !important;  /* Updated shadow color to match */
+}

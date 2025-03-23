@@ -1,0 +1,31 @@
+.font-['Varela_Round'] {
+    font-family: "Varela Round";
+}
+
+/* Hide scrollbar but keep functionality */
+.sidebar-content {
+    -ms-overflow-style: none !important;  /* IE and Edge */
+    scrollbar-width: none !important;  /* Firefox */
+}
+
+.sidebar-content::-webkit-scrollbar {
+    display: none !important;  /* Chrome, Safari and Opera */
+}
+
+@media (min-width: 1024px) {
+    .sidebar-toggle {
+        display: none !important;
+    }
+}
+
+/* Global input and textarea focus styles */
+input:focus,
+textarea:focus {
+    outline: 2px solid rgb(253, 208, 23) !important;
+    outline-offset: -1px !important;
+    border-color: rgb(253, 208, 23) !important;
+    --tw-ring-color: rgb(253, 208, 23) !important;
+    --tw-ring-offset-shadow: none !important;
+    --tw-ring-shadow: none !important;
+    box-shadow: 0 0 0 1px rgb(253, 208, 23) !important;
+}

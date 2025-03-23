@@ -1,0 +1,15 @@
+.custom-button {
+    @apply bg-[rgb(253,208,23)] text-black px-4 py-2 rounded-md transition-none;
+}
+
+.custom-button:hover {
+    @apply bg-[rgb(253,208,23)];
+}
+
+.custom-button:focus {
+    @apply outline-none ring-0;
+}
+
+.custom-button:disabled {
+    @apply opacity-50 cursor-not-allowed;
+}
