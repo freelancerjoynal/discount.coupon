@@ -158,7 +158,7 @@ export default function Index({ shops, overviews }) {
 
                 if (response.ok) {
                     const result = await response.json();
-                    console.log("Task completed:", result);
+                    // console.log("Task completed:", result);
                 } else {
                     console.error(
                         "Error running background task:",

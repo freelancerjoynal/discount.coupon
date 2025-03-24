@@ -17,6 +17,9 @@ const Table = ({
         url = url + "?page=" + pageNumber;
         router.visit(url);
     };
+
+
+    // console.log(tableData)
     return (
         <React.Fragment>
             <TableContainer
