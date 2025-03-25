@@ -5,7 +5,7 @@ export default function ShopCategory({ shopCategory }) {
     const { t } = useTranslation();
 
     // State to manage the number of categories to display
-    const [visibleCategories, setVisibleCategories] = useState(10);
+    const [visibleCategories, setVisibleCategories] = useState(20);
 
     // Function to load more categories
     const loadMore = () => {
