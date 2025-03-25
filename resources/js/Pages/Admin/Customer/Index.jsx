@@ -100,7 +100,7 @@ export default function Index({ customers }) {
                                         {t("Email")}
                                     </th>
                                     <th className="px-6 pb-4 pt-5">
-                                        {t("Phone")}
+                                        {t("Mobile")}
                                     </th>
                                     <th className="px-6 pb-4 pt-5">
                                         {t("Registered")}
