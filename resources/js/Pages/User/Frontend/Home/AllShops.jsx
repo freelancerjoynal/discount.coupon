@@ -19,7 +19,7 @@ export default function AllShops({ combinedData }) {
         };
     });
 
-    console.log(sortedByPosition);
+    // console.log(sortedByPosition);
 
     return (
         <div>
