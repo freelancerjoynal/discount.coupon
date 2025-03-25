@@ -13,6 +13,7 @@ use Inertia\Inertia;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
+use PHPUnit\Framework\Constraint\Count;
 
 class CouponController extends Controller
 {
@@ -99,6 +100,7 @@ class CouponController extends Controller
         //     ],
         // ]);
 
+
         PageHeader::set()->title('Create Coupon');
 
         $shops = Shop::active()->select('id as value', 'name as label')->get();
@@ -113,8 +115,14 @@ class CouponController extends Controller
      */
     public function store(CP\StoreCouponRequest $request)
     {
+        $count = Coupon::count();
+        $position = $count + 1;
 
-        Coupon::create($request->validated());
+        // Merge the position value with the validated data
+        $data = $request->validated();
+        $data['position'] = $position;
+
+        Coupon::create($data);
 
         return redirect()->route('admin.coupons.index')->with('success', 'Coupon created successfully');
     }
@@ -197,14 +205,14 @@ class CouponController extends Controller
             ->with('shop') // Eager load shop relationship
             ->when($search, function ($query, $search) {
                 $search = strtolower($search);
-                return $query->where(function($q) use ($search) {
+                return $query->where(function ($q) use ($search) {
                     $q->whereRaw('LOWER(code) LIKE ?', ["%{$search}%"])
-                      ->orWhereRaw('LOWER(description) LIKE ?', ["%{$search}%"])
-                      ->orWhereRaw('LOWER(short_description) LIKE ?', ["%{$search}%"])
-                      ->orWhereRaw('LOWER(title) LIKE ?', ["%{$search}%"])
-                      ->orWhereHas('shop', function($shopQuery) use ($search) {
-                          $shopQuery->whereRaw('LOWER(name) LIKE ?', ["%{$search}%"]);
-                      });
+                        ->orWhereRaw('LOWER(description) LIKE ?', ["%{$search}%"])
+                        ->orWhereRaw('LOWER(short_description) LIKE ?', ["%{$search}%"])
+                        ->orWhereRaw('LOWER(title) LIKE ?', ["%{$search}%"])
+                        ->orWhereHas('shop', function ($shopQuery) use ($search) {
+                            $shopQuery->whereRaw('LOWER(name) LIKE ?', ["%{$search}%"]);
+                        });
                 });
             })
             ->paginate(10);

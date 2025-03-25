@@ -11,6 +11,7 @@ class Coupon extends Model
     use \Staudenmeir\EloquentEagerLimit\HasEagerLimit;
     protected $fillable = [
         'title',
+        'position',
         'short_description',
         'description',
         'image',
