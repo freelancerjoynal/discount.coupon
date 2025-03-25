@@ -21,16 +21,17 @@ export default function ShopCategoryCard({ category }) {
         >
             <div className="container mx-auto">
                 <div className="my-8">
-                    <div className="grid grid-cols-1 items-center justify-center gap-4 md:flex md:justify-between">
+                    {/* <div className="grid grid-cols-1 items-center justify-start gap-4 md:flex md:justify-start"> */}
+                    <div className="">
                         {/* Section Title */}
-                        <div
+                        {/* <div
                             className="mx-auto flex items-center justify-center gap-3 border-b-4 border-[#333333] pb-3 md:pb-4"
                             style={{ width: "fit-content" }}
                         >
-                            {/* <span className="mt-16 text-4xl font-[400] tracking-[-1px] text-[#333333] sm:text-[20px] sm:tracking-[-2px] md:text-[35px]">
+                            <span className="mt-16 text-4xl font-[400] tracking-[-1px] text-[#333333] sm:text-[20px] sm:tracking-[-2px] md:text-[35px]">
                                 {category.type}
-                            </span> */}
-                        </div>
+                            </span>
+                        </div> */}
 
                         {/* Button */}
                         <button
@@ -68,7 +69,8 @@ export default function ShopCategoryCard({ category }) {
                         <ShopCard key={shop.id} shop={shop} />
                     ))}
                 </div>
-                <div className="mx-auto flex items-center justify-center">
+                {/* <div className="mx-auto flex items-center justify-center"> */}
+                <div>
                     <button
                         onClick={handleViewAll}
                         className="bg-green flex items-center justify-center gap-2"
