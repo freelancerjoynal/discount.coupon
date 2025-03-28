@@ -11,7 +11,17 @@ const TableBody = ({ data, columns }) => {
             }
         }
 
-        if (column.call && typeof column.call == "function") {
+        // Combined logic for 'status' column
+        if (column.accessor === "status") {
+            if (row.claimed_at) {
+                return "Claimed";
+            }
+            if (value === "Active" || value === "Expire") {
+                return value;
+            }
+        }
+
+        if (column.call && typeof column.call === "function") {
             return (
                 <>
                     {column.call({
@@ -21,6 +31,7 @@ const TableBody = ({ data, columns }) => {
                 </>
             );
         }
+
         return value;
     };
 

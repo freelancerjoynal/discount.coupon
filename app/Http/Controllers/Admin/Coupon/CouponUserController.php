@@ -12,6 +12,7 @@ class CouponUserController extends Controller
 {
     public function couponUsers(Coupon $coupon)
     {
+
         $overviews = [
             [
                 'title' => 'Total Coupon Usage',
